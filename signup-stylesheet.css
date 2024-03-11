@@ -1,0 +1,118 @@
+* {
+    font-family: system-ui, Arial, sans-serif, Helvetica;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+a {
+    margin: 0 0.3rem;
+    text-decoration: underline;
+    color: white;
+}
+
+.page-layout {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.image-sidebar {
+    background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 38.5vw 100vh;
+    background-position-x: -3.9rem;
+    width: 30vw;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.487);
+    color: white;
+    margin-top: 10rem;
+    padding: .7rem;
+}
+
+img[src="images/odin-lined-2.png"] {
+    width: 4.8rem;
+}
+
+.logo > img + span {
+    font-family: Norse-Bold;
+    font-size: 5rem;
+    align-content: center;
+    margin-top: 1.5rem;
+}
+
+.image-sidebar > div + span {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 26rem; 
+    color: white;
+}
+
+.sign-up-layout {
+    background-color: rgb(246, 246, 246);
+    width: 70vw;
+    height: 100vh;
+}
+
+.section-one {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 35px;
+    padding: 40px;
+    line-height: 30px;
+    width: 750px;
+}
+
+.section-one > p {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.sign-up {
+    /* box-shadow: ; */
+    background-color: white;
+    padding: 18px 40px;
+    height: 260px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sign-up > p {
+    color: rgb(59, 59, 59);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.inputs-left,
+.inputs-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-left {
+    margin-right: 75px;
+}
+
+input {
+   
+    border-radius: 4px;
+    width: 250px;
+    padding: 5px;
+    margin-bottom: 18px;
+}
+
