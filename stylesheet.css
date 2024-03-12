@@ -1,0 +1,146 @@
+* {
+    font-family: system-ui, Arial, sans-serif, Helvetica;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+a {
+    margin: 0 0.3rem;
+    text-decoration: underline;
+    color: white;
+}
+
+.page-layout {
+    display: flex;
+}
+
+.image-sidebar {
+    background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 38.5vw 100vh;
+    background-position-x: -3.9rem;
+    width: 30vw;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.487);
+    color: white;
+    margin-top: 150px;
+    padding: 10px;
+}
+
+img[src="images/odin-lined-2.png"] {
+    width: 80px;
+}
+
+.logo > img + span {
+    font-family: Norse-Bold;
+    font-size: 5rem;
+    align-content: center;
+    margin-top: 22px;
+}
+
+.image-sidebar > div + span {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 390px; 
+    color: white;
+}
+
+.sign-up-layout {
+    background-color: rgb(246, 246, 246);
+}
+
+.section-one {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 35px;
+    padding: 40px;
+    line-height: 30px;
+    width: 630px;
+}
+
+.section-one > p {
+    margin-top: 12px;
+}
+
+.sign-up {
+    box-shadow: 0px 9px 15px rgba(72, 72, 72, 0.287);
+    background-color: white;
+    padding: 18px 40px;
+    height: 265px;
+}
+
+form {
+    display: flex;
+    width: 925px;
+}
+
+.sign-up > p {
+    color: rgb(59, 59, 59);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.inputs-left,
+.inputs-right {
+    display: flex;
+    flex-direction: column;
+    /* flex shrink not working right */
+    flex-basis: auto;
+    flex-shrink: 1; 
+}
+
+.inputs-left {
+    margin-right: 75px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 700;
+    color: rgb(82, 80, 80);
+    margin-bottom: 4px;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    width: 250px;
+    padding: 8px;
+    margin-bottom: 18px;
+}
+
+.create-account {
+    background-color: #596D48;
+    color: white;
+    font-size: .9rem;
+    font-weight: 500;
+    border: solid;
+    border-radius: 8px;
+    width: 200px;
+    margin: 20px 40px;
+    padding: 12px 14px;
+}
+
+.create-account + p {
+    font-size: .9rem;
+    font-weight: 500;
+    margin: 10px 40px;
+}
+
+.create-account + p > a {
+    color: #596D48;
+    text-decoration: none;
+}
