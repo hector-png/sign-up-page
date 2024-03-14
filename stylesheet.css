@@ -1,3 +1,4 @@
+/* Universal styles */
 * {
     font-family: system-ui, Arial, sans-serif, Helvetica;
     margin: 0;
@@ -5,19 +6,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --form-actions-color: #596D48;
+}
+
+/* Page structure */
+.page-layout {
+    display: flex;
+}
+
+/* Sidebar section */
 @font-face {
     font-family: Norse-Bold;
     src: url(fonts/Norse-Bold.otf);
-}
-
-a {
-    margin: 0 0.3rem;
-    text-decoration: underline;
-    color: white;
-}
-
-.page-layout {
-    display: flex;
 }
 
 .image-sidebar {
@@ -30,10 +31,10 @@ a {
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
     background-color: rgba(0, 0, 0, 0.487);
     color: white;
+    display: flex;
+    justify-content: center;
     margin-top: 150px;
     padding: 10px;
 }
@@ -42,21 +43,28 @@ img[src="images/odin-lined-2.png"] {
     width: 80px;
 }
 
-.logo > img + span {
+.logo-title {
     font-family: Norse-Bold;
     font-size: 5rem;
     align-content: center;
     margin-top: 22px;
 }
 
-.image-sidebar > div + span {
+.image-author {
+    color: white;
     font-size: 0.8rem;
     display: flex;
     justify-content: center;
     margin-top: 390px; 
-    color: white;
 }
 
+.sidebar-link {
+    color: white;
+    text-decoration: underline;
+    margin: 0 0.3rem;
+}
+
+/* Signup content */
 .sign-up-layout {
     background-color: rgb(246, 246, 246);
 }
@@ -64,83 +72,114 @@ img[src="images/odin-lined-2.png"] {
 .section-one {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-top: 35px;
-    padding: 40px;
     line-height: 30px;
     width: 630px;
+    margin-top: 35px;
+    padding: 40px;
 }
 
 .section-one > p {
     margin-top: 12px;
 }
 
-.sign-up {
-    box-shadow: 0px 9px 15px rgba(72, 72, 72, 0.287);
+.sign-up-container {
     background-color: white;
+    box-shadow: 0px 9px 15px rgba(72, 72, 72, 0.287);
+    height: 275px;
     padding: 18px 40px;
-    height: 265px;
 }
 
-form {
-    display: flex;
-    width: 925px;
-}
-
-.sign-up > p {
+.call-to-action {
     color: rgb(59, 59, 59);
     font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.inputs-left,
-.inputs-right {
-    display: flex;
-    flex-direction: column;
-    /* flex shrink not working right */
-    flex-basis: auto;
-    flex-shrink: 1; 
+form {
+    width: 925px;
 }
 
-.inputs-left {
-    margin-right: 75px;
+/* input styles */
+form > div {
+    display: flex;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
 }
 
 label {
-    text-transform: uppercase;
+    color: rgb(82, 80, 80);
     font-size: .7rem;
     font-weight: 700;
-    color: rgb(82, 80, 80);
+    text-transform: uppercase;
     margin-bottom: 4px;
 }
 
 input {
+    outline: none;
     border: 1px solid #E5E7EB;
     border-radius: 4px;
     width: 250px;
-    padding: 8px;
     margin-bottom: 18px;
+    padding: 8px;
+}
+
+input[type='password'] {
+    margin: 0;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+/* form-validation styles */
+.is-invalid {
+    border-color: red;
+}
+
+.error {
+    font-size: .7rem;
+    color: red;
+}
+
+/* Submit/Login */
+.form-options{
+    flex-direction: column;
+    justify-content: left;
 }
 
 .create-account {
-    background-color: #596D48;
+    background-color: var(--form-actions-color);
     color: white;
     font-size: .9rem;
     font-weight: 500;
     border: solid;
     border-radius: 8px;
     width: 200px;
-    margin: 20px 40px;
+    margin-top: 40px;
+    margin-bottom: 10px;
     padding: 12px 14px;
 }
 
-.create-account + p {
-    font-size: .9rem;
-    font-weight: 500;
-    margin: 10px 40px;
+.create-account:hover {
+    background-color: #6d805c;
 }
 
-.create-account + p > a {
-    color: #596D48;
+.create-account:active {
+    background-color: #4e613e;
+}
+
+.login {
+    font-size: .9rem;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.login-link {
+    color: var(--form-actions-color);
     text-decoration: none;
 }
